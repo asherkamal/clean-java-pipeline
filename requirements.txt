@@ -1,0 +1,9 @@
+datasets>=2.14
+boto3
+smart_open[s3]
+transformers>=4.40
+bitsandbytes>=0.43
+torch>=2.0
+accelerate>=0.27
+tqdm
+huggingface_hub
