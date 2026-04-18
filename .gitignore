@@ -1,1 +1,35 @@
+# Secrets
 .env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Dependencies
+site-packages/
+
+# Pipeline output
+output_dataset/
+
+# Checkstyle JAR (downloaded locally)
+*.jar
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.iml
