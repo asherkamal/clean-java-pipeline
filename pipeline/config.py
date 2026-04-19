@@ -1,12 +1,12 @@
 import os
 from pathlib import Path
 
-CHECKSTYLE_JAR   = os.environ.get("CHECKSTYLE_JAR", "checkstyle.jar")
+CHECKSTYLE_JAR   = os.environ.get("CHECKSTYLE_JAR", "/app/tools/checkstyle.jar")
 CHECKSTYLE_CFG   = str(Path(__file__).parent.parent / "checkstyle-config.xml")
 
 GGUF_MODEL_REPO  = "Qwen/Qwen2.5-Coder-7B-Instruct-GGUF"
 GGUF_MODEL_FILE  = "qwen2.5-coder-7b-instruct-q4_k_m.gguf"
-GGUF_MODEL_PATH  = os.environ.get("GGUF_MODEL_PATH", GGUF_MODEL_FILE)
+GGUF_MODEL_PATH  = os.environ.get("GGUF_MODEL_PATH", f"/app/models/{GGUF_MODEL_FILE}")
 
 OUTPUT_DIR       = "output_dataset"
 MAX_OUTPUT_GB    = float(os.environ.get("MAX_OUTPUT_GB", 0))

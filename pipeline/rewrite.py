@@ -14,10 +14,11 @@ def load_model() -> Llama:
     model_path = GGUF_MODEL_PATH
     if not os.path.exists(model_path):
         log.info("Downloading GGUF model %s/%s...", GGUF_MODEL_REPO, GGUF_MODEL_FILE)
-        model_path = hf_hub_download(
+        hf_hub_download(
             repo_id=GGUF_MODEL_REPO,
             filename=GGUF_MODEL_FILE,
             token=HF_TOKEN,
+            local_dir=os.path.dirname(model_path),
         )
     log.info("Loading GGUF model from %s...", model_path)
     return Llama(
