@@ -4,6 +4,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         openjdk-21-jdk-headless \
         python3-pip \
         cmake \
+        ninja-build \
         build-essential \
     && rm -rf /var/lib/apt/lists/*
 

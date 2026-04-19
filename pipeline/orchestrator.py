@@ -95,6 +95,7 @@ def run_pipeline() -> None:
         if batch_results:
             flush_batch(batch_results, shard_idx)
             shard_idx += 1
+            print(f"Batch {shard_idx} streamed ({len(batch_results)} files, {total_bytes / 1024**3:.2f} GB total)")
 
         pbar.set_postfix({**counts, "size_gb": f"{total_bytes / 1024**3:.2f}"})
 
