@@ -5,5 +5,6 @@ huggingface_hub
 tqdm
 python-dotenv
 transformers
+tiktoken
 
 llama-cpp-python
